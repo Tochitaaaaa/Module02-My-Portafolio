@@ -1,0 +1,227 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #f2f2f2;
+    --black: #000000;
+    --blue: rgba(43, 127, 229, 0.82);
+    --contentbackground: rgba(95, 101, 124, 0.78);
+    --font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+body {    
+    background-color: rgba(23, 38, 72, 0.858);
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+/* navigation title */
+#author {
+    color: var(--white);
+    padding: 10px;
+    font-size: 50px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: var(--blue);
+    background-color: black;
+    display: inline;
+    width: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* navigating links */
+.navlinks {
+    background-color: var(--blue)  ;
+    font-weight: bold;  
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    text-align: right;
+    align-content: center;
+    font-family:serif;
+}
+
+.navlinks ul li {
+    display: inline;
+    align-items: flex-end;
+}
+
+.navlinks ul li a{
+    color: var(--black);
+    text-decoration: none;
+    margin-right: 30px;
+    border-bottom: 2px solid var(--black);
+}
+
+.navlinks ul li a:hover {
+    color: var(--white);   
+    cursor: pointer;
+}
+
+/* background nav*/
+section {
+    background-image: url(./Assets/liquid-bg.jpeg);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
+
+section text {
+    font-size: 40px;
+    margin: 0 30px 20px 0;
+    color: var(--white  );
+    align-self: flex-end;
+    padding: 5px;
+    background-color: rgb(67, 67, 67);
+    opacity: .60;
+}
+
+.parentofcontent {
+    display: flex;
+    flex-direction: row;   
+    justify-content:flex-start;
+    width: 100%;
+    padding: 70px;
+    display: flex;
+    text-align:right;
+    font-size: 36px;
+}
+
+.actualcontent {
+    font-size: 28px;
+    text-align: left;
+    justify-content: center;
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    background-color: var(--contentbackground);
+
+}
+
+.titlecontainer {
+    text-align: right;
+    display: flex;
+    font-family:sans-serif;
+    align-items: center;
+    padding: 20px;
+    border-right: 2px solid var(--black)    ;
+    font-size: 45px;
+    font-weight: 550;
+    color: var(--blue);
+    text-shadow: #000000;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: var(--black);
+    height: auto;
+    width: 250px;
+}
+
+.titlecontainer text {
+    min-width: 200px;
+}
+
+#imagecontent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-self: center;
+    background-color: var(--contentbackground);
+}
+
+#containersmall{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+}
+.imagecontainerlarge {
+    margin-top: 40px;
+}
+.imagecontainersmall {
+    height: 435px;
+    flex-basis: 1;
+    width: 350px;
+    margin: 40px;
+}
+
+.imagecontainersmall:hover {
+    opacity: .7;
+}
+
+#contactcontent {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    justify-content: space-evenly;
+}
+
+#contactcontent a, #contantcontent text{
+    text-decoration: none;
+    font-size: 26px;
+    color: #f2f2f2;
+}
+
+.contactinfocontainer {
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    border-bottom: 2px solid var(--black);
+    margin: 35px;
+}
+
+#contactme .contactinfocontainer a:hover {
+    color: var(--blue); 
+}
+
+footer {
+    height: auto;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 40px;
+    font-family: var(--font);
+}
+
+@media only screen and (min-width:700px) and (max-width: 1200px) {
+    header {
+        flex-direction: column;}
+    .author {
+        display: block;}
+    #contactcontent { 
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        min-width: min-content;}
+        .imagecontainersmall {
+            margin: 5px;
+            width: 250px;
+        }
+}
+
+@media only screen and (max-width:700px) {
+    #contactcontent { 
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        min-width: min-content;
+        }
+
+        .imagecontainersmall {
+            margin: 5px;
+            width: 250px;
+        }
+}
