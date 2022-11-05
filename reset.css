@@ -85,7 +85,7 @@ section text {
     background-color: rgb(67, 67, 67);
     opacity: .60;
 }
-
+/* Parent */
 .parentofcontent {
     display: flex;
     flex-direction: row;   
@@ -195,7 +195,7 @@ footer {
     padding-bottom: 40px;
     font-family: var(--font);
 }
-
+/* I was able to change the view of the website */
 @media only screen and (min-width:700px) and (max-width: 1200px) {
     header {
         flex-direction: column;}
@@ -206,12 +206,11 @@ footer {
         display: flex;
         flex-wrap: wrap;
         min-width: min-content;}
-        .imagecontainersmall {
-            margin: 5px;
-            width: 250px;
-        }
+    .imagecontainersmall {
+        margin: 5px;
+        width: 250px;}
 }
-
+/* This is to keep the text inside the box when it's smaller */
 @media only screen and (max-width:700px) {
     #contactcontent { 
         font-size: 16px;
@@ -219,9 +218,10 @@ footer {
         flex-wrap: wrap;
         min-width: min-content;
         }
+    summary .actualcontent {
+        font-size: 20px;}
 
-        .imagecontainersmall {
-            margin: 5px;
-            width: 250px;
-        }
+    .imagecontainersmall {
+        margin: 5px;
+        width: 250px;}
 }
